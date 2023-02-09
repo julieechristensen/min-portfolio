@@ -6,7 +6,7 @@
   --gap-m:2rem;
   --gap-s:1rem;
   --border-radius: 0px;
-  --color-dark:#222;
+  --color-dark:#505050;
   --color-dark-200:#444;
   --color-dark-300:#666;
   --color-dark-500:#888;
@@ -23,7 +23,7 @@
   --color-accent-700: #009fbb;
   --color-accent-800: #009fbb;
   --color-accent-900: #009fbb;
-  --color-light: #efe4d8;
+  --color-light: #ECD9AD;
   --color-light-200: #efe4d8;
   --color-light-300: #efe4d8;
   --color-light-400: #efe4d8;
@@ -34,6 +34,8 @@
   --color-light-900: #efe4d8;
   --font-sans: "arial", sans-serif;
   --font-serif: "georgia,"serif;
+  --futura-bold: "futura-pt-bold", sans-serif;
+  --futura-pt: "futura-pt", sans-serif;
   --line-height:1.5;
   --font-scale:1.25;
   --font-size:1rem;
@@ -66,6 +68,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
+h1 {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 p {
   line-height: var --line-height;
 }
@@ -83,24 +97,56 @@ li {
   line-height: var --line-height;
 }
 
-.test {
+.header {
+  display: grid;
   background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 1rem 2rem;
-  border: 0;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 700;
-  display: inline-block;
-  text-decoration: none;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 0 var(--gap-l);
+  margin: 2rem;
 }
-.test:hover {
-  background-color: var(--color-accent);
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  position: relative;
+  gap: var(--gap-m);
+}
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-family: var(--futura-pt);
+  font-size: var(--font-size-4);
   color: var(--color-light);
 }
 
 .hero {
-  background-color: black;
+  display: flex;
+  min-height: 90vh;
+  position: relative;
+  background-color: var(--color-dark);
+}
+.hero__inner {
+  display: grid;
+  align-items: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+.hero__hero__content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

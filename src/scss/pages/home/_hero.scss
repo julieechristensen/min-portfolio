@@ -1,3 +1,28 @@
-.hero {
-    background-color: black;
+.hero { 
+   display: flex;
+   min-height: 90vh;
+   position: relative;
+   background-color: var(--color-dark);
+  
+   
+   
+   
+
+   &__inner {
+          display: grid; 
+          align-items: center;
+          padding: 2rem ;
+        margin: 2rem; 
+       
+   }
+
+   &__hero__content {
+    display: grid; 
+      align-items: center;
+     justify-content: center;
+      position: relative;
+     //  padding: 2rem ;
+      margin: 2rem;
+      
+   }
 }
