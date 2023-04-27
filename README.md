@@ -3,5 +3,7 @@
 
 
 ## develop 
-`sass --watch src/scss/style.scss style.css`
+``
 
+
+sass --watch src/scss/style.scss style.css

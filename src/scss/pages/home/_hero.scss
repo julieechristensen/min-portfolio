@@ -1,28 +1,66 @@
+@use '../../ultilities/responsive';
+
 .hero { 
-   display: flex;
+   display: grid;
    min-height: 90vh;
    position: relative;
    background-color: var(--color-dark);
-  
-   
-   
-   
+
+
 
    &__inner {
-          display: grid; 
-          align-items: center;
-          padding: 2rem ;
-        margin: 2rem; 
+      
+      display: flex;
+       align-items: center;
+       position: relative;
+
        
    }
 
-   &__hero__content {
-    display: grid; 
-      align-items: center;
-     justify-content: center;
-      position: relative;
-     //  padding: 2rem ;
-      margin: 2rem;
+   &__content {
+    margin-left: 13.5rem;
+   color: var(--color-light);
+   font-family: var(--futura-pt);
+      
+    @include responsive.max(46rem) {
+      margin-left: 3rem;
+     }
+
+   }
+
+   &__title {
+  
+    font-size: 6rem;  
+    color: var(--color-light);
+    font-family: var(--futura-pt);
+    
+    @include responsive.max(46rem) {
+      font-size: 4rem;
+  }
+    
+      
+    &:after {
+      content: ''; 
+      display: block;
+      height: 1px ;
+      width: 30vh;
+      background-color: var(--color-light); 
+      margin-left: 1rem;
+
+      @include responsive.max(46rem) {
+         width: 20vh;
+     }
+  
+
+     }
+   }
+
+   &__description{
+      font-family: var(--futura-pt);
+      color: var(--color-light);
+      font-size: var(--font-size-3);
+      margin-left: 1rem;  
+
       
    }
 }

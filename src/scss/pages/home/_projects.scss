@@ -1,0 +1,144 @@
+
+@use '../../ultilities/responsive';
+
+.projects {
+   
+    background-color: var(--color-dark);
+    display: grid;
+    grid-template-columns: minmax(1rem,1fr) [inner-start] minmax(0, 73rem) [inner-end] minmax(1rem, 1fr);
+    min-height: 100vh;
+    
+
+ 
+
+    &__inner {
+        grid-column: inner; 
+   
+
+     }
+
+    
+   
+
+    &__title {
+      
+        font-size: 6rem;  
+        color: var(--color-light);
+        font-family: var(--futura-pt);
+        margin-left: 2rem;
+    
+
+        @include responsive.max(46rem) {
+            font-size: 4rem;
+        }
+      
+    
+        &:after {
+            content: ''; 
+            display: block;
+            height: 1px ;
+            width: 30vh;
+            background-color: var(--color-light); 
+            margin-left: 1rem;
+
+            @include responsive.max(46rem) {
+                width: 20vh;
+            }
+         
+      
+          }
+      
+       
+    }
+
+
+
+ }
+
+
+ .project {
+    display: flex;
+    position: relative; 
+    
+    
+
+    &__header {
+    font-size: var(--font-size-3);
+    font-family: var(--futura-pt);
+    }
+
+    &__title {
+    
+        min-height: 40px;
+        max-width: 300px;
+        width: 100%;
+        position: absolute;
+        left: -2rem;
+        bottom: -1rem;
+        transform: rotate(-90deg);
+        transform-origin: 0 0 ;
+
+        @include responsive.max(80rem) {
+            left: 0;
+            
+        }
+
+        @include responsive.max(40rem) {
+            font-size: var(--font-size-1); 
+            bottom: 1rem;
+        }
+    }
+
+    &__details {
+     
+        position: relative;
+        margin-bottom: 2.5rem;   
+
+    }
+
+
+    &__meta {
+    background-color: var(--color-dark-200);
+    position: absolute;
+    bottom: 55px;       
+    right: -4px;
+    padding: 0.5rem 1rem 0.6rem;
+    font-size: var(--font-size-2);
+    font-family: var(--futura-pt);
+    color: var(--color-light);
+    border-radius: 10%;
+
+    @include responsive.max(40rem){
+        font-size: var(--font-size-1);   
+        padding: 0;
+      
+    }
+   }
+
+   &__link {
+    color: var(--color-light); 
+    transition: all 0.2s;
+
+    &:hover {
+        color: var(--color-light-200);
+    }
+    
+
+       
+    &:after {
+        content: ''; 
+        display: block;
+        height: 1px ;
+        width: 3vh;
+        margin-left: 5rem;
+        background-color: var(--color-light); 
+        
+         @include responsive.max(40rem) {
+            visibility: hidden;
+         } 
+  
+      }
+   }
+   
+}
+

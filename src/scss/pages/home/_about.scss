@@ -1,0 +1,122 @@
+@use '../../ultilities/responsive';
+
+
+.about {
+    background-color: var(--color-dark);
+    
+    @include responsive.max(40rem)  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+   
+   
+
+  
+
+   &__section {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;   
+   }
+
+   &__title { 
+    font-size: 6rem;  
+    color: var(--color-light);
+    font-family: var(--futura-pt);  
+   
+
+    @include responsive.max(46rem) {
+        font-size: 4rem;
+    } 
+
+
+&:after {
+    content: ''; 
+    display: block;
+    height: 1px ;
+    width: 30vh;
+    background-color: var(--color-light); 
+    margin-left: 1rem;
+
+    @include responsive.max(46rem) {
+        width: 20vh;
+      }
+
+     }
+
+   }
+
+   &__description {
+  
+    font-family: var(--futura-pt);
+    color: var(--color-light);
+    font-size: var(--font-size-3); 
+    margin-bottom: 3rem;
+
+   }
+
+&__link {
+background-color: var(--color-dark-200);
+font-family: var(--futura-pt);
+color: var(--color-light);
+font-size: var(--font-size-3);
+padding: 0.5rem 1rem 0.6rem;
+list-style: none;
+border-radius: 10%;
+
+
+&:hover {
+    color: var(--color-light-200);
+      }
+   }
+
+
+   &__img {
+   display: flex;
+   height: 260px;
+   margin-right: 13rem;
+  
+   @include responsive.max(80rem) {
+    visibility: hidden;
+   }
+
+
+   }
+    
+   
+   
+   
+
+   &__social {
+    margin: 3rem 1rem 0 1rem;
+  
+   }
+
+
+}
+
+.section__inner {
+    padding-left: 13.5rem;
+}
+
+.social {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+
+    &__item {  
+        display: block;  
+        height: 40px;
+        width: 40px;
+       
+    }
+
+}
+
+   
+      
+    
+
